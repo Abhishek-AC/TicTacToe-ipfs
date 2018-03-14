@@ -19,4 +19,4 @@ npm start;
 
 Website will be loaded at: http://127.0.0.1:12345
 
-TODO: use solidity events to update state changes and response from Illegal move investigation, reduce node_modules weight.
+TODO: get myAddress automatically, use solidity events to update state changes and response from Illegal move investigation, reduce node_modules weight.
