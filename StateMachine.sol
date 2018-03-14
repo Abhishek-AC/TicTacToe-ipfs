@@ -15,7 +15,7 @@ contract StateMachine is usingOraclize{
         newGame(); //sets state to inital state
     }
     
-    //neede for solidity-util
+    //needed for solidity-util
     using Strings for string;
 
     //saves the states of the game 
@@ -24,7 +24,7 @@ contract StateMachine is usingOraclize{
     //keeps track of turn number
     uint public turn=0;
     
-    //getter for acces from Web3-js
+    //getter for access from Web3-js
     function GetTurn() public view returns(uint){
         return turn;
     }
@@ -32,7 +32,7 @@ contract StateMachine is usingOraclize{
     //bool to see if Illegal moves where found after CheckState()
     bool public FunnyBuisness=false;
     
-    //getter for acces from Web3-js
+    //getter for access from Web3-js
     function getFunnyBuisness() public view returns(bool){
         return FunnyBuisness;
     }
@@ -79,7 +79,7 @@ contract StateMachine is usingOraclize{
     function newGame() public{
         turn=0;
         addState("QmQWkhCHYAVRFB5bAeSn7ghM8xnvXQKm1g3ugapiqTkgqo"); //0,w,w,w,w,w,w,w,w,w turn:0 and all fields are white
-        FunnyBuisness=false; //no illegal moves ate the start of the game
+        FunnyBuisness=false; //no illegal moves at the start of the game
         }
     
     //adds a new state to state array
