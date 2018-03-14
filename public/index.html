@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Tic-Tac-Toe</title>
+    <link rel="shortcut icon" href="">
+
+    <style type="text/css">
+    	.field{
+    		background-color: white;
+    		border-color: black;
+    		width: 350px;
+    		height: 650px;
+    	}
+
+    	.w{
+    		padding:100px;
+    		background-color: white;
+    		border-color: black;
+    		border-width: 3px;
+    		border-style: solid;
+    		margin:3px;
+    	}
+    	.b{
+    		padding:100px;
+    		background-color: blue;
+    		margin:3px;
+    		border-color: black;
+    		border-width: 3px;
+    		border-style: solid;
+    	}
+    	.r{
+    		padding:100px;
+    		background-color: red;
+    		margin:3px;
+    		border-color: black;
+    		border-width: 3px;
+    		border-style: solid;
+    	}
+ 
+    	</style>
+  </head>
+  <body>
+  	<div class="field">
+    	<table>
+    		<tr>
+    			<td id="1" class="w" ></td>
+    			<td id="2" class="w" ></td>
+    			<td id="3" class="w" ></td>
+    		</tr>
+    		<tr>
+    			<td id="4" class="w" ></td>
+    			<td id="5" class="w" ></td>
+    			<td id="6" class="w" ></td>
+    		</tr>
+    		<tr>
+    			<td id="7" class="w" ></td>
+    			<td id="8" class="w" ></td>
+    			<td id="9" class="w" ></td>
+    		</tr>
+
+    	</table>
+       </div>
+       <form>
+        <button id="update" type="button">Update State</button>
+       <button id="check" type="button">Check for Illegal moves</button>
+       </form>
+      <script src="js/app.js"></script>
+  </body>
+</html>
