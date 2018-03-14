@@ -17,6 +17,8 @@ if (typeof web3 !== 'undefined') {
 // connect to ipfs daemon API server
 var ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'})
 
+var myAddress="METAMASK-ADDRESS";
+
 //address of contract instance ON ROPSTEN TESTNET
 var contractAddress="0x266114dfc8166ce3cc475e19677322ba29c0ef79" 
 
@@ -239,7 +241,7 @@ function getTurnState(){
 function startGame(turn){
   if(turn!==1){
     stateContract.methods.newGame()
-    .send({from:"0xd0B9A3f5cEe4bb9af3F68DC1D93FE5071f5b68a6"}).then(function(res){
+    .send({from:myAddress}).then(function(res){
     startInterval();  // starts watching for new states //TODO use solidty events for that
     console.log("New game started!")
     console.log(res); //logs information of block 
@@ -295,7 +297,7 @@ function display (toGet) {
 // calls check function in SC
 function checkIllegalMoves(){
   stateContract.methods.checkForFunnyBuisness()
-  .send({from:"0xd0B9A3f5cEe4bb9af3F68DC1D93FE5071f5b68a6"})
+  .send({from:myAddress})
   .then(function(res){
     console.log("Query was sent to Oraclize, waiting for answer....(can take up to 1 min.)");
     console.log(res);
@@ -379,7 +381,7 @@ function store () {
 //calls SC function with ipfs hash as arguments
 function setContractState(_stateHash){
   stateContract.methods.addState(_stateHash)
-  .send({from:"0xd0B9A3f5cEe4bb9af3F68DC1D93FE5071f5b68a6"})
+  .send({from:myAddress})
   .then(function(res){
     startInterval(); // after new state added start looking again for new states
     console.log(res);
