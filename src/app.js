@@ -17,7 +17,13 @@ if (typeof web3 !== 'undefined') {
 // connect to ipfs daemon API server
 var ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'})
 
-var myAddress="METAMASK-ADDRESS";
+var myAddress;
+
+var accountInterval = setInterval(function() {
+  web3.eth.getAccounts().then(function(_user){
+    myAddress=_user[0]
+  });
+  }, 100);
 
 //address of contract instance ON ROPSTEN TESTNET
 var contractAddress="0x266114dfc8166ce3cc475e19677322ba29c0ef79" 
