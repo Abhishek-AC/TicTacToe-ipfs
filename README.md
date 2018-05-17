@@ -9,8 +9,6 @@ MetaMask set on Ropsten Testnet with some test-ether for gas.
 
 Setup:
 
-in app.js set "myAddress" to your MetaMask wallet address
-
 npm install;
 
 npm run build;
