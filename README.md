@@ -1,5 +1,5 @@
 # TicTacToe-ipfs
-A proof of concept on how IPFS state channels can be used in Ethereum based games.
+Implementation of the IPFS State Channel (https://github.com/AleBuser/TicTacToe-ipfs/blob/master/Game-Channels.pdf) for Ethereum based games.
 
 Requirements:
 
@@ -15,6 +15,4 @@ npm run build;
 
 npm start;
 
-Website will be loaded at: http://127.0.0.1:12345
-
-TODO:use solidity events to update state changes and response from Illegal move investigation, reduce node_modules weight.
+Website will be loaded at: http://127.0.0.1:12345 
